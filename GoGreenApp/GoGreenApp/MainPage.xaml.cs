@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GoGreenApp.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,14 @@ namespace GoGreenApp
         public MainPage()
         {
             InitializeComponent();
+        }
+
+
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            MicroMarketRestService mrs = new MicroMarketRestService();
+            await mrs.getAll();
         }
     }
 }
