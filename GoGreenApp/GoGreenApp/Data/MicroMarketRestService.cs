@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace GoGreenApp.Data
 {
@@ -32,6 +33,9 @@ namespace GoGreenApp.Data
                 {
                     var content = await response.Content.ReadAsStringAsync();
                     items = JsonConvert.DeserializeObject<List<MicroMarket>>(content);
+                    MicroMarket mm = new MicroMarket();
+              
+
                 }
             }
             catch (Exception ex)

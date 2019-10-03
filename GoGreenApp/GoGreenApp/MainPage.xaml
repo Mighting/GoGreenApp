@@ -9,6 +9,24 @@
         <Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+        <ListView x:Name="listView"
+              Margin="20"
+             >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="20,0,0,0"
+                                 HorizontalOptions="StartAndExpand"
+                                 Orientation="Horizontal">
+                            <Label Text="{Binding firstName}"
+                               VerticalTextAlignment="Center" />
+                            <Label Text="{Binding streetName}"
+                               VerticalTextAlignment="Center" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <Button Text="Get M.M" Clicked="Button_Clicked">
             
         </Button>

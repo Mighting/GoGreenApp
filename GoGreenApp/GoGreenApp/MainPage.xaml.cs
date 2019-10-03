@@ -20,7 +20,8 @@ namespace GoGreenApp
         private async void Button_Clicked(object sender, EventArgs e)
         {
             MicroMarketRestService mrs = new MicroMarketRestService();
-            await mrs.getAll();
+            listView.ItemsSource = await mrs.getAll();
+
         }
     }
 }
